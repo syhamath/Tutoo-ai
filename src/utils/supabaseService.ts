@@ -1,3 +1,9 @@
+// at top with your other imports
+import { serverBase } from './supabase/info';
+
+// then:
+private static readonly SERVER_URL = `${serverBase}`;
+
 import { createClient } from '@supabase/supabase-js';
 import { UserProfile, Course, Lesson, ProgressUpdate, APIResponse, LoginRequest } from '../types/app';
 import { projectId, publicAnonKey } from './supabase/info';
