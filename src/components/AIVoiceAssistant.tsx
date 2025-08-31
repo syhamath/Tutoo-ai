@@ -6,6 +6,8 @@ import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import OwlIcon from './OwlIcon';
 import { Language, AIQuery, AIResponse } from '../types/app';
+import React, { useState, useRef, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';  // ← change this line
 
 interface AIVoiceAssistantProps {
   language: Language;
