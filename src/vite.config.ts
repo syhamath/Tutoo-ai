@@ -1,24 +1,7 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
-import path from 'path'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vitejs.dev/config/
+// Clean config – no Tailwind plugin needed for v3
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./"),
-    },
-  },
-  server: {
-    port: 5173,
-    host: true, // Allow access from network
-  },
-  build: {
-    outDir: 'dist',
-    sourcemap: true,
-  },
-  // PWA configuration
-  publicDir: 'public',
-})
+  plugins: [react()],
+});
