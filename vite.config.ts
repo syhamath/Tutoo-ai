@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "motion/react": "framer-motion" // map all motion/react imports
+      "motion/react": "framer-motion"  // <- map all motion/react imports
     }
   }
 });
