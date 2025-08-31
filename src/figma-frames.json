@@ -1,0 +1,608 @@
+{
+  "figmaFrames": {
+    "metadata": {
+      "title": "Murshidi - AI Mentoring App for Mauritania",
+      "description": "Kid-friendly educational app with gamification (ages 8-18)",
+      "colorSystem": {
+        "primary": "#1D9BF0",
+        "secondary": "#FFD34E", 
+        "success": "#27AE60",
+        "accent": "#FF5A5F",
+        "purple": "#6A0DAD",
+        "orange": "#F97316",
+        "lightBlue": "#E8F4FD",
+        "lightYellow": "#FFF9E6",
+        "lightGreen": "#E8F5E8",
+        "lightPurple": "#F3F0FF"
+      },
+      "fonts": {
+        "primary": "Inter",
+        "sizes": "14px base, kid-friendly scaling"
+      },
+      "culturalNotes": "Designed for Mauritania - supports French/Arabic RTL, with space for Wolof, Pulaar, Soninke"
+    },
+    "frames": [
+      {
+        "name": "Student Lesson View",
+        "width": 375,
+        "height": 812,
+        "theme": "sky-blue",
+        "components": [
+          {
+            "type": "header",
+            "height": 100,
+            "backgroundColor": "#1D9BF0",
+            "content": {
+              "backButton": {
+                "type": "icon",
+                "icon": "arrow-left",
+                "color": "white",
+                "size": 24
+              },
+              "subjectName": {
+                "text": "Mathématiques ⚽",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "color": "white"
+              },
+              "lessonTitle": {
+                "text": "Les Fractions Magiques",
+                "fontSize": 16,
+                "color": "white",
+                "opacity": 0.9
+              },
+              "sidebarToggle": {
+                "type": "icon",
+                "icon": "menu",
+                "color": "white",
+                "size": 24
+              }
+            }
+          },
+          {
+            "type": "video-player",
+            "top": 100,
+            "height": 200,
+            "backgroundColor": "#000000",
+            "borderRadius": 24,
+            "margin": 16,
+            "content": {
+              "thumbnail": {
+                "backgroundColor": "#E8F4FD",
+                "centerIcon": "play-circle",
+                "iconSize": 64,
+                "iconColor": "#1D9BF0"
+              },
+              "controls": {
+                "playButton": true,
+                "progressBar": true,
+                "duration": "7:30"
+              }
+            }
+          },
+          {
+            "type": "practice-section",
+            "top": 320,
+            "content": {
+              "title": {
+                "text": "Questions Pratiques",
+                "fontSize": 18,
+                "fontWeight": "bold",
+                "margin": 16
+              },
+              "questionCard": {
+                "backgroundColor": "white",
+                "borderRadius": 24,
+                "padding": 20,
+                "margin": 16,
+                "shadow": "0 4px 20px rgba(29, 155, 240, 0.1)",
+                "content": {
+                  "question": "Quelle est la valeur de 3/4 + 1/4 ?",
+                  "options": [
+                    {
+                      "text": "A) 4/8",
+                      "backgroundColor": "#F8F9FA",
+                      "borderRadius": 16,
+                      "padding": 12,
+                      "margin": 8
+                    },
+                    {
+                      "text": "B) 1",
+                      "backgroundColor": "#E8F4FD",
+                      "borderRadius": 16,
+                      "padding": 12,
+                      "margin": 8,
+                      "selected": true
+                    },
+                    {
+                      "text": "C) 4/4",
+                      "backgroundColor": "#F8F9FA",
+                      "borderRadius": 16,
+                      "padding": 12,
+                      "margin": 8
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "type": "ai-help-box",
+            "bottom": 100,
+            "backgroundColor": "#F3F0FF",
+            "borderRadius": 24,
+            "margin": 16,
+            "padding": 16,
+            "content": {
+              "header": {
+                "icon": "sparkles",
+                "text": "Demande à l'IA",
+                "fontSize": 16,
+                "fontWeight": "bold",
+                "color": "#6A0DAD"
+              },
+              "inputArea": {
+                "placeholder": "Pose ta question ici...",
+                "backgroundColor": "white",
+                "borderRadius": 20,
+                "padding": 12
+              },
+              "buttons": [
+                {
+                  "type": "mic",
+                  "icon": "mic",
+                  "backgroundColor": "#1D9BF0",
+                  "color": "white",
+                  "borderRadius": 20,
+                  "size": 40
+                },
+                {
+                  "type": "send",
+                  "icon": "send",
+                  "backgroundColor": "#27AE60",
+                  "color": "white",
+                  "borderRadius": 20,
+                  "size": 40
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Teacher Upload View",
+        "width": 375,
+        "height": 812,
+        "theme": "green",
+        "components": [
+          {
+            "type": "header",
+            "height": 100,
+            "backgroundColor": "#27AE60",
+            "content": {
+              "backButton": {
+                "type": "icon",
+                "icon": "arrow-left",
+                "color": "white",
+                "size": 24
+              },
+              "title": {
+                "text": "Nouveau Contenu 📚",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "color": "white"
+              }
+            }
+          },
+          {
+            "type": "form-container",
+            "top": 120,
+            "padding": 20,
+            "content": [
+              {
+                "type": "input-field",
+                "label": "Titre de la leçon",
+                "placeholder": "Ex: Introduction aux fractions",
+                "backgroundColor": "white",
+                "borderRadius": 16,
+                "padding": 16,
+                "margin": 12,
+                "border": "2px solid #E8F5E8"
+              },
+              {
+                "type": "dropdown",
+                "label": "Matière",
+                "options": ["Mathématiques", "Français", "Sciences", "Histoire-Géo"],
+                "backgroundColor": "white",
+                "borderRadius": 16,
+                "padding": 16,
+                "margin": 12,
+                "icon": "chevron-down"
+              },
+              {
+                "type": "file-upload-area",
+                "height": 120,
+                "backgroundColor": "#E8F5E8",
+                "borderRadius": 24,
+                "borderStyle": "dashed",
+                "borderColor": "#27AE60",
+                "margin": 12,
+                "content": {
+                  "icon": "upload-cloud",
+                  "iconSize": 48,
+                  "iconColor": "#27AE60",
+                  "text": "Glisse tes fichiers ici",
+                  "subtext": "Vidéo, PDF, images"
+                }
+              },
+              {
+                "type": "textarea",
+                "label": "Notes pour les étudiants",
+                "placeholder": "Ajoute des instructions ou conseils...",
+                "height": 100,
+                "backgroundColor": "white",
+                "borderRadius": 16,
+                "padding": 16,
+                "margin": 12
+              }
+            ]
+          },
+          {
+            "type": "upload-button",
+            "bottom": 40,
+            "backgroundColor": "#27AE60",
+            "color": "white",
+            "borderRadius": 24,
+            "height": 56,
+            "margin": 20,
+            "content": {
+              "icon": "upload",
+              "text": "Publier la Leçon",
+              "fontSize": 18,
+              "fontWeight": "bold"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Student Progress View",
+        "width": 375,
+        "height": 812,
+        "theme": "orange-yellow",
+        "components": [
+          {
+            "type": "header-profile",
+            "height": 140,
+            "backgroundColor": "linear-gradient(135deg, #F97316, #FFD34E)",
+            "borderRadius": "0 0 32 32",
+            "content": {
+              "avatar": {
+                "type": "circle",
+                "size": 64,
+                "backgroundColor": "white",
+                "icon": "⚽",
+                "fontSize": 32
+              },
+              "nickname": {
+                "text": "Champion Ahmed",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "color": "white"
+              },
+              "level": {
+                "text": "Niveau 3",
+                "backgroundColor": "rgba(255,255,255,0.2)",
+                "borderRadius": 16,
+                "padding": "4 12",
+                "color": "white"
+              },
+              "xpBar": {
+                "width": "100%",
+                "height": 8,
+                "backgroundColor": "rgba(255,255,255,0.3)",
+                "borderRadius": 4,
+                "progress": {
+                  "width": "75%",
+                  "backgroundColor": "white",
+                  "borderRadius": 4
+                },
+                "label": "150 / 200 XP"
+              }
+            }
+          },
+          {
+            "type": "streak-calendar",
+            "top": 160,
+            "margin": 20,
+            "backgroundColor": "white",
+            "borderRadius": 24,
+            "padding": 20,
+            "shadow": "0 4px 20px rgba(249, 115, 22, 0.1)",
+            "content": {
+              "title": {
+                "text": "Ma Série 🔥",
+                "fontSize": 18,
+                "fontWeight": "bold"
+              },
+              "streakDays": [
+                {"day": "L", "completed": true, "backgroundColor": "#27AE60"},
+                {"day": "M", "completed": true, "backgroundColor": "#27AE60"},
+                {"day": "M", "completed": true, "backgroundColor": "#27AE60"},
+                {"day": "J", "completed": true, "backgroundColor": "#27AE60"},
+                {"day": "V", "completed": true, "backgroundColor": "#27AE60"},
+                {"day": "S", "completed": false, "backgroundColor": "#E5E7EB"},
+                {"day": "D", "completed": false, "backgroundColor": "#E5E7EB"}
+              ]
+            }
+          },
+          {
+            "type": "recent-lessons",
+            "top": 280,
+            "margin": 20,
+            "backgroundColor": "white",
+            "borderRadius": 24,
+            "padding": 20,
+            "content": {
+              "title": {
+                "text": "Dernières Leçons",
+                "fontSize": 18,
+                "fontWeight": "bold"
+              },
+              "lessons": [
+                {
+                  "icon": "🧮",
+                  "title": "Fractions Magiques",
+                  "progress": 100,
+                  "stars": 3,
+                  "backgroundColor": "#FFF9E6"
+                },
+                {
+                  "icon": "📚",
+                  "title": "Héros des Histoires",
+                  "progress": 85,
+                  "stars": 2,
+                  "backgroundColor": "#E8F5E8"
+                },
+                {
+                  "icon": "🌍",
+                  "title": "Système Solaire",
+                  "progress": 50,
+                  "stars": 1,
+                  "backgroundColor": "#E8F4FD"
+                }
+              ]
+            }
+          },
+          {
+            "type": "badges-stars",
+            "bottom": 40,
+            "margin": 20,
+            "backgroundColor": "white",
+            "borderRadius": 24,
+            "padding": 20,
+            "content": {
+              "title": {
+                "text": "Mes Étoiles ⭐",
+                "fontSize": 18,
+                "fontWeight": "bold"
+              },
+              "badgeGrid": [
+                {"icon": "🎯", "earned": true, "glow": true},
+                {"icon": "🧮", "earned": true, "glow": true},
+                {"icon": "🔥", "earned": true, "glow": true},
+                {"icon": "🏆", "earned": false, "opacity": 0.3},
+                {"icon": "⚡", "earned": true, "glow": true},
+                {"icon": "🌟", "earned": false, "opacity": 0.3}
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Parent Dashboard",
+        "width": 375,
+        "height": 812,
+        "theme": "purple",
+        "components": [
+          {
+            "type": "header",
+            "height": 100,
+            "backgroundColor": "#6A0DAD",
+            "content": {
+              "title": {
+                "text": "Progrès d'Ahmed 👨‍👩‍👧‍👦",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "color": "white"
+              },
+              "backButton": {
+                "type": "icon",
+                "icon": "arrow-left",
+                "color": "white",
+                "size": 24
+              }
+            }
+          },
+          {
+            "type": "weekly-chart",
+            "top": 120,
+            "margin": 20,
+            "backgroundColor": "white",
+            "borderRadius": 24,
+            "padding": 20,
+            "shadow": "0 4px 20px rgba(106, 13, 173, 0.1)",
+            "content": {
+              "title": {
+                "text": "Activité Hebdomadaire",
+                "fontSize": 18,
+                "fontWeight": "bold",
+                "color": "#6A0DAD"
+              },
+              "chart": {
+                "type": "bar-chart",
+                "bars": [
+                  {"day": "Lun", "xp": 150, "height": "60%", "color": "#6A0DAD"},
+                  {"day": "Mar", "xp": 100, "height": "40%", "color": "#6A0DAD"},
+                  {"day": "Mer", "xp": 200, "height": "80%", "color": "#6A0DAD"},
+                  {"day": "Jeu", "xp": 50, "height": "20%", "color": "#6A0DAD"},
+                  {"day": "Ven", "xp": 175, "height": "70%", "color": "#6A0DAD"},
+                  {"day": "Sam", "xp": 125, "height": "50%", "color": "#6A0DAD"},
+                  {"day": "Dim", "xp": 0, "height": "0%", "color": "#E5E7EB"}
+                ]
+              }
+            }
+          },
+          {
+            "type": "improvement-areas",
+            "top": 300,
+            "margin": 20,
+            "backgroundColor": "white",
+            "borderRadius": 24,
+            "padding": 20,
+            "content": {
+              "title": {
+                "text": "À Améliorer",
+                "fontSize": 18,
+                "fontWeight": "bold",
+                "color": "#6A0DAD"
+              },
+              "areas": [
+                {
+                  "icon": "🧮",
+                  "topic": "Fractions complexes",
+                  "score": 65,
+                  "backgroundColor": "#FFF7ED",
+                  "progressColor": "#F97316"
+                },
+                {
+                  "icon": "📚",
+                  "topic": "Conjugaison passé",
+                  "score": 58,
+                  "backgroundColor": "#FEF2F2",
+                  "progressColor": "#EF4444"
+                },
+                {
+                  "icon": "🌍",
+                  "topic": "Système solaire",
+                  "score": 72,
+                  "backgroundColor": "#FFFBEB",
+                  "progressColor": "#F59E0B"
+                }
+              ]
+            }
+          },
+          {
+            "type": "engagement-stats",
+            "bottom": 40,
+            "margin": 20,
+            "backgroundColor": "white",
+            "borderRadius": 24,
+            "padding": 20,
+            "content": {
+              "title": {
+                "text": "Statistiques d'Engagement",
+                "fontSize": 18,
+                "fontWeight": "bold",
+                "color": "#6A0DAD"
+              },
+              "stats": [
+                {
+                  "icon": "⏱️",
+                  "label": "Temps d'étude",
+                  "value": "2h 45min",
+                  "subtext": "cette semaine"
+                },
+                {
+                  "icon": "🤖",
+                  "label": "Questions IA",
+                  "value": "23",
+                  "subtext": "demandes d'aide"
+                },
+                {
+                  "icon": "🏆",
+                  "label": "Badges gagnés",
+                  "value": "4",
+                  "subtext": "ce mois-ci"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "designSystem": {
+      "borderRadius": {
+        "small": 12,
+        "medium": 16,
+        "large": 24,
+        "xlarge": 32
+      },
+      "spacing": {
+        "xs": 4,
+        "sm": 8,
+        "md": 12,
+        "lg": 16,
+        "xl": 20,
+        "xxl": 24
+      },
+      "shadows": {
+        "light": "0 2px 10px rgba(0,0,0,0.05)",
+        "medium": "0 4px 20px rgba(0,0,0,0.1)",
+        "heavy": "0 8px 40px rgba(0,0,0,0.15)"
+      },
+      "animations": {
+        "buttonHover": "scale(1.05)",
+        "cardHover": "translateY(-2px)",
+        "celebration": "rotate(5deg) scale(1.1)"
+      }
+    },
+    "culturalAdaptations": {
+      "languages": {
+        "french": {
+          "direction": "ltr",
+          "fontFamily": "Inter"
+        },
+        "arabic": {
+          "direction": "rtl", 
+          "fontFamily": "Inter, 'Noto Sans Arabic'",
+          "textAlign": "right"
+        },
+        "futureLanguages": ["Wolof", "Pulaar", "Soninke"]
+      },
+      "iconography": {
+        "culturalIcons": {
+          "football": "⚽ (very popular in Mauritania)",
+          "desert": "🏜️ (geographical relevance)",
+          "camel": "🐪 (cultural significance)",
+          "mosque": "🕌 (religious context)",
+          "dates": "🌴 (local agriculture)"
+        }
+      },
+      "colorMeanings": {
+        "green": "Islam, nature, success",
+        "blue": "Sky, water, peace", 
+        "yellow": "Sun, energy, happiness",
+        "red": "Attention, urgency (use carefully)"
+      }
+    },
+    "accessibilityFeatures": {
+      "textScaling": "Support for 125% - 200% scaling",
+      "colorContrast": "WCAG AA compliant",
+      "touchTargets": "Minimum 44px for kid-friendly interaction",
+      "screenReader": "Proper aria-labels and semantic HTML",
+      "keyboardNavigation": "Full keyboard support planned"
+    },
+    "techSpecs": {
+      "responsive": {
+        "mobile": "375px - 414px",
+        "tablet": "768px - 1024px",
+        "desktop": "1280px+"
+      },
+      "performance": {
+        "offlineFirst": true,
+        "lowBandwidth": "Optimized for 2G/3G networks",
+        "caching": "Aggressive caching for rural areas"
+      }
+    }
+  }
+}
