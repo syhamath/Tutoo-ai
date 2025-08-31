@@ -19,7 +19,10 @@ export class SupabaseService {
   // Example final URLs produced by makeRequest:
   //   - Supabase Edge: https://<project>.supabase.co/functions/v1/auth/signup
   //   - Cloudflare Pages: /api/auth/signup   (if VITE_API_BASE=/api)
-  private static readonly SERVER_URL = `${serverBase}`;
+ // private static readonly SERVER_URL = `${serverBase}`;
+  // Example inside supabaseService.ts
+private static readonly SERVER_URL = `${serverBase}/make-server-ad5853f1`;
+
 
   // Initialize Supabase client with error handling
   private static initializeSupabase() {
